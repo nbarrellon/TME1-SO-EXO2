@@ -17,3 +17,21 @@ void PrintTab(int *tab,int size){
 	}
 	printf("\n");
 }
+
+int SumTab(int *tab,int size){
+	int somme = 0;
+	for (int i=0;i<size;i++){
+		somme = somme + tab[i];
+	}
+	return somme;
+
+}
+
+int MinSumTab(int *min,int *tab,int size){
+	*min = tab[0];
+	for (int i=1;i<size;i++){
+		if (*min>tab[i]) *min=tab[i];
+	}
+	return SumTab(tab,size);
+
+}
